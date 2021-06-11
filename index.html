@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+    <title>Document</title>
+<body>
+ 
+    <html>
+	<head>
+
+	<title>CountDown Timer</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href='https://dl.dropbox.com/s/ikvdc375vx0j4ph/typicons.css' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.deepai.org/deepai.min.js"></script>
+                                                                                                                     
+	</head>
+			
+	<body>
+
+		<div id="top">
+			<div class="top-center">
+				<span class="typcn typcn-stopwatch" id="watch-icon" align="center"></span>
+				<div id="top-title"> WonnaRace? </div>
+			</div>
+		</div>
+
+
+		<div class="content">
+            <div id="options">
+
+				<div id="button_toggleOptions"><div class="button-text" align="center">Options</div></div>
+				<div id="options_inner_cont" class="hide">
+
+				<form id="options_form" action="" method="get">
+					<label class="options_label">Seconds</label>
+						<div class="styled-select" style="position:absolute;margin-top:-5px;margin-left:110px;">
+    						<select name="user_seconds" >
+        						<option value="">-------------------</option>
+                				<option>30</option>
+                				<option>35</option>
+                				<option>40</option>
+                				<option>45</option>
+                				<option>50</option>
+                				<option>55</option>
+               	 				<option>60</option>
+                				<option>65</option>
+               	 				<option>70</option>
+                				<option>75</option>
+                				<option>80</option>
+            				</select>       
+        				</div>
+
+						<div id="options_set" class="active" align="center" onClick="return checkOptions(this.form)">Set</div>
+				</form>
+				</div>
+				<div id="checkmark_cont"><span class="typcn typcn-tick" id="checkmark" align="center"></span></div>
+			</div>
+
+		<div id="countdown-cont">
+
+				<div id="countdown-left" align="center">-</div>
+				<div id="countdown-right" align="center">-</div>
+			</div>
+
+			<div id="smallButtonSet">
+				<div id="button_start" id="start" class="active"><span class="typcn typcn-media-play" id="start-icon" align="center"></span></div>
+				<div id="button_pause" id="pause" ><span class="typcn typcn-media-pause" id="pause-icon" align="center"></span></div>
+				<div id="button_stop" id="stop"><span class="typcn typcn-media-stop" id="stop-icon" align="center"></span></div>
+			</div>			
+
+			
+            <div id="text-to-write" class="button-text" >
+            </div>
+
+            <div id="place-to-write" contenteditable="true" >
+
+            </div>
+		</div>
+
+		<div id="footer">
+			<div id="footer_text" align="center">CountDown Timer</div>	
+		</div>
+
+	</body>
+<script src="index.js"></script>
+</html>
+</body>
+</html>
