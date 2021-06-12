@@ -83,19 +83,45 @@ function seperateDigits() {
              alert("error!");
             }
            });
-           $( document ).ready(function() {
-            var i = 1;
-      
+
+           var i = 0;
+
+           $( document ).ready(function() {    
            $("#place-to-write").keypress(function(){
-            var x = $('#text-to-write').text(); 
-            var y = $('#place-to-write').text()
-            
-                if( y[i] !=x[i] ){
-                    console.log(x[i]);
-                    console.log(y[i]);
+            var x = $('#text-to-write').text().trim(); 
+            var y = $('#place-to-write').text();
+                debugger;
+                 if (x[i-1] == " "){
+                    //
+                }
+                else if( y[i-1] !=x[i-1] ){
+                    $("#place-to-write").css({ background: "red" });
+                    console.log('i match')
+                    console.log(x[i-1]);
+                    console.log(y[i-1]);
+                }
+                else {
+                    console.log('i donttt')
+                    console.log(y[i-1]);
+                    $("#place-to-write").css({ background: "#006400	" });
                 }
             i++;
           });
+          $('#place-to-write').keyup(function(e){
+            console.log(e.which);  
+            if(e.keyCode == 8) {
+                console.log('delete here')
+                console.log(x[i-1]);
+                console.log(y[i-1]);
+               i--;
+            }
+            if(e.keyCode == 32) {
+                console.log('space')
+                console.log(x[i-1]);
+                console.log(y[i-1]);
+               i--;
+            }
+        });
         });
            
 
